@@ -87,9 +87,9 @@ bcrypt.compare(plainText, hashed) returns a promise (or uses callback). Practica
 
 ## 🧩 Endpoints & quick testing
 
-- GET /login — renders login form (template: template/login.ejs)  
+- GET /register — renders register form  for registration of user(template: template/register.ejs)  
 - POST /data — submit { username, password } to save username + hashed password in session  
-- GET /sign-up — renders sign-up template (template/sign.ejs)  
+- GET /login — renders login template (template/login.ejs)  
 - POST /check — compares supplied password with hashed password stored in session (fix needed)  
 - GET /dashboard — protected route; returns welcome message if session has username  
 - GET /logout — destroy session and clear cookie
