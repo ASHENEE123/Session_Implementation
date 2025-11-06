@@ -41,8 +41,8 @@ app.use("/login",limit({
     max:5,
     message:"sry out of requests"
 }))
-app.get("/login",(req,res)=>{
-    res.render("login")
+app.get("/register",(req,res)=>{
+    res.render("register")
 })
 app.post("/data",async(req,res)=>{
     const {username,password}=req.body
@@ -60,8 +60,8 @@ app.post("/data",async(req,res)=>{
     req.session.username=username;
      res.send("data is correct")
 })
-app.get("/register",(req,res)=>{
-      res.render("sign")
+app.get("/login",(req,res)=>{
+      res.render("login")
 })
 app.post("/check",async(req,res)=>{
  const word=req.body.password
@@ -90,3 +90,4 @@ app.listen(3000,(err)=>{
     console.log("success")
 
 })
+
