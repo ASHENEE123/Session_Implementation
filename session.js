@@ -60,7 +60,7 @@ app.post("/data",async(req,res)=>{
     req.session.username=username;
      res.send("data is correct")
 })
-app.get("/sign-up",(req,res)=>{
+app.get("/register",(req,res)=>{
       res.render("sign")
 })
 app.post("/check",async(req,res)=>{
@@ -88,4 +88,5 @@ app.get("/logout",(req,res)=>{
 app.listen(3000,(err)=>{
     if (err) throw err;
     console.log("success")
+
 })
